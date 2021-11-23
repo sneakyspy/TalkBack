@@ -24,3 +24,4 @@ func TakeLines():
 	var Qvalue = rand_range(0, Questions.len)
 	var Rvalue = rand_range(0, Responces.len)
 	
+
