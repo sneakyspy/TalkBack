@@ -1,16 +1,26 @@
 extends Node
 
+var Questions = [
+	"",
+	"",
+	"",
+	#general questions that could be answered with basic answers
+	"",
+	"",
+	"",
+	#Should be a good amount of these since they are referanced every time someone speaks.
+]
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
+var Responces = [
+	"",
+	#Write The Possible Responces, Wich should be general responces.
+	#You should have less of these because we have little way of writing answers based on the questions asked
+	"",
+	"",
+	"",
+]
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func TakeLines():
+	var Qvalue = rand_range(0, Questions.len)
+	var Rvalue = rand_range(0, Responces.len)
+	
