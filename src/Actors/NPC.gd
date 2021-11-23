@@ -1,7 +1,13 @@
-extends KinematicBody2D
-class_name Actor
-var maxSpeed
+extends Node2D
 
+var People = [
+	"James",
+	"Pam",
+	"Stevan",
+	
+]
 
-func Move():
+#Gonna Make code to take from the array to make a dictionary for the character
+
+func _ready() -> void:
 	pass
