@@ -1,36 +1,149 @@
 {
-  "Conversation": [
+  {
+    "ID": "01",
+    "used":false
+    "Question": "How are you?",
+    "answers": [
+      {
+        "Reply":"Good",
+        "Net outcome": +10
+      },,
+      {
+        "Reply":"Bad",
+        "Net outcome": -5
+      },
+      {
+        "Reply":"I don't know",
+        "Net outcome": -2
+      },
+    },
+  ],
+  {
+    "ID": "02",
+    "used":false
+    "Question": "What is your name?",
+    "answers": [
+      {
+        "Reply":"Ha",
+        "Net outcome": +10
+      },
+      {
+        "Reply":"Vietnam",
+        "Net outcome": -5
+      },
+      {
+        "Reply":"I don't know",
+        "Net outcome": -2
+      },
+    },
+  ],
     {
-      "lines": [
+      "ID": "03",
+      "used":false
+      "Question": "Do you have any siblings?",
+      "answers": [
         {
-          "ID": 01
-          "Question": "string";
-          "answers": [
-            {
-              "Reply":"more strings",
-              "Net outcome": +1
-            }
-            {
-              "Reply":"more strings",
-              "Net outcome": -1
-            }
-          ]
-        }
+          "Reply":"Yes",
+          "Net outcome": +10
+        },
         {
-          "ID": "02"
-          "Question": "string";
-          "answers": [
-            {
-              "Reply":"more strings",
-              "Net outcome": +1
-            }
-            {
-              "Reply":"more strings",
-              "Net outcome": -1
-            }
-          ]
+          "Reply":"No",
+          "Net outcome": -5
+        },
+        {
+          "Reply":"I don't know",
+          "Net outcome": -2
+        },
+      },
+    ],
+      {
+      "ID": "04",
+      "used":false
+      "Question": "Where are you from?",
+      "answers": [
+        {
+          "Reply":"Vietnam",
+          "Net outcome": +10
+        },
+        {
+          "Reply":"America",
+          "Net outcome": -5
+        },
+        {
+          "Reply":"I don't know",
+          "Net outcome": -2
+        },
+      },
+    ],
+      {
+      "ID": "05",
+      "used":false
+      "Question": "What is your favorite food?",
+      "answers": [
+        {
+          "Reply":"Papaya",
+          "Net outcome": +10
+        },
+        {
+          "Reply":"KFC",
+          "Net outcome": -5
+        },
+          {
+          "Reply":"I don't know",
+          "Net outcome": -2
         }
-      ]
+      },
+        "ID": "06",
+        "used":false
+        "Question": "How many siblings do you have?",
+        "answers": [
+          {
+            "Reply":"Three",
+          "Net outcome": +10
+          },
+          {
+            "Reply":"Fifty",
+            "Net outcome": -5
+          },
+          {
+            "Reply":"I don't know",
+            "Net outcome": -2
+          }
+      }
+    ],
+        "ID": "07",
+        "used":false
+        "Question": "string",
+        "answers": [
+          {
+            "Reply":"more strings",
+            "Net outcome": +10
+          },
+          {
+            "Reply":"more strings",
+            "Net outcome": -5
+          },
+          {
+          "Reply":"I don't know",
+            "Net outcome": -2
+          }
+        },
+        "ID": "08",
+        "used":false
+        "Question": "string",
+        "answers": [
+          {
+            "Reply":"more strings",
+            "Net outcome": +10
+          },
+          {
+            "Reply":"more strings",
+            "Net outcome": -5
+          },
+          {
+            "Reply":"I don't know",
+            "Net outcome": -2
+          },
+        ]
+      },
     }
-  ]
-}

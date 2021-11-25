@@ -1,25 +1,13 @@
 extends Node
-var random = 1
-
-var starters = [
-	{
-		"Qustion":
-			"string",
-		
-	}
-]
-
-#var Questions = [
-#	{"Question": "How are You", "Answer": ["Good", "Bad"]},
-#	{"Question": "What is you name", "Answer": ["Ha", "Don't know'"]},
-#	{"Question": "Do you not Understand", "Answer": ["No", "Sorry"]},
-#	{"Question": "Where are you from", "Answer": "Vietnam"}
-#]
-
-
 
 func MakeLine():
-	var line = []
-	
+	var file = File.new
+	file.open('res//Save.json', File.READ)
+	var dict = parse_json(file.get_as_text())
+	return dict
+
+
+func _ready() -> void:
+	print(MakeLine() + "BlankText")
 
 
