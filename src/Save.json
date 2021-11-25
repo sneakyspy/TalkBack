@@ -1,0 +1,36 @@
+{
+  "Conversation": [
+    {
+      "lines": [
+        {
+          "ID": 01
+          "Question": "string";
+          "answers": [
+            {
+              "Reply":"more strings",
+              "Net outcome": +1
+            }
+            {
+              "Reply":"more strings",
+              "Net outcome": -1
+            }
+          ]
+        }
+        {
+          "ID": "02"
+          "Question": "string";
+          "answers": [
+            {
+              "Reply":"more strings",
+              "Net outcome": +1
+            }
+            {
+              "Reply":"more strings",
+              "Net outcome": -1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,27 +1,25 @@
 extends Node
+var random = 1
 
-var Questions = [
-	"",
-	"",
-	"",
-	#general questions that could be answered with basic answers
-	"",
-	"",
-	"",
-	#Should be a good amount of these since they are referanced every time someone speaks.
+var starters = [
+	{
+		"Qustion":
+			"string",
+		
+	}
 ]
 
-var Responces = [
-	"",
-	#Write The Possible Responces, Wich should be general responces.
-	#You should have less of these because we have little way of writing answers based on the questions asked
-	"",
-	"",
-	"",
-]
+#var Questions = [
+#	{"Question": "How are You", "Answer": ["Good", "Bad"]},
+#	{"Question": "What is you name", "Answer": ["Ha", "Don't know'"]},
+#	{"Question": "Do you not Understand", "Answer": ["No", "Sorry"]},
+#	{"Question": "Where are you from", "Answer": "Vietnam"}
+#]
 
-func TakeLines():
-	var Qvalue = rand_range(0, Questions.len)
-	var Rvalue = rand_range(0, Responces.len)
+
+
+func MakeLine():
+	var line = []
 	
+
 
