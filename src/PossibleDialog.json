@@ -1,0 +1,230 @@
+{
+  {
+	"ID": "01",
+	"used":false
+	"Question": "How are you?",
+	"answers": [
+	  {
+		"Reply":"Good",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Bad",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "02",
+	"used":false
+	"Question": "What is your name?",
+	"answers": [
+	  {
+		"Reply":"Ha",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Vietnam",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "03",
+	"used":false
+	"Question": "Do you have any siblings?",
+	"answers": [
+	  {
+		"Reply":"Yes",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"No",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "04",
+	"used":false
+	"Question": "Where are you from?",
+	"answers": [
+	  {
+		"Reply":"Vietnam",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"America",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "05",
+	"used":false
+	"Question": "What is your favorite food?",
+	"answers": [
+	  {
+		"Reply":"Papaya",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"KFC",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "06",
+	"used":false
+	"Question": "How many siblings do you have?",
+	"answers": [
+	  {
+		"Reply":"Three",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Fifty",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "07",
+	"used":false
+	"Question": "How are you?",
+	"answers": [
+	  {
+		"Reply":"Good",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Bad",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "08",
+	"used":false
+	"Question": "How are you?",
+	"answers": [
+	  {
+		"Reply":"Good",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Bad",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "09",
+	"used":false
+	"Question": "How are you?",
+	"answers": [
+	  {
+		"Reply":"Good",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Bad",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "10",
+	"used":false
+	"Question": "How are you?",
+	"answers": [
+	  {
+		"Reply":"Good",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Bad",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "11",
+	"used":false
+	"Question": "How are you?",
+	"answers": [
+	  {
+		"Reply":"Good",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Bad",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+  {
+	"ID": "12",
+	"used":false
+	"Question": "How are you?",
+	"answers": [
+	  {
+		"Reply":"Good",
+		"Net outcome": +10
+	  },
+	  {
+		"Reply":"Bad",
+		"Net outcome": -5
+	  },
+	  {
+		"Reply":"I don't know",
+		"Net outcome": -2
+	  }
+  ]
+  },
+}

@@ -1,12 +1,5 @@
 extends Node
 
-func MakeLine():
-	var file = File.new()
-	file.open('res://Save.json', File.READ)
-	var dictionary = parse_json(file.get_as_text())
-
-var dict = {}
-
 func load_json_file(path):
 	"""Loads a JSON file from the given res path and return the loaded JSON object."""
 	var file = File.new()
@@ -20,8 +13,8 @@ func load_json_file(path):
 		print("\tError String: ", result_json.error_string)
 		return null
 	var obj = result_json.result
-	print(text)
 	return obj
 
 func _ready() -> void:
-	print(load_json_file('res//Save.json'))
+	var dialogs = load_json_file('res://PossibleDialog.json.tres')
+	print(dialogs[0]["answers"][0])
