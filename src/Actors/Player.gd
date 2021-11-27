@@ -1,7 +1,8 @@
-extends Node
+extends KinematicBody2D
+onready var dialogs = load_json_file('res://PossibleDialog.json.tres')
+var respect = 0
 
-func load_json_file(path):
-	"""Loads a JSON file from the given res path and return the loaded JSON object."""
+func load_json_file(path):#not gonna touch that
 	var file = File.new()
 	file.open(path, file.READ)
 	var text = file.get_as_text()
@@ -16,5 +17,4 @@ func load_json_file(path):
 	return obj
 
 func _ready() -> void:
-	var dialogs = load_json_file('res://PossibleDialog.json.tres')
-	print(dialogs[0]["answers"][0])
+	pass
