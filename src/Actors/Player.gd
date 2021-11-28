@@ -1,8 +1,8 @@
 extends KinematicBody2D
 onready var dialogs = load_json_file('res://PossibleDialog.json.tres')
-var respect = 0
+var reputation = 0
 
-func load_json_file(path):#not gonna touch that
+func load_json_file(path):
 	var file = File.new()
 	file.open(path, file.READ)
 	var text = file.get_as_text()
@@ -15,6 +15,3 @@ func load_json_file(path):#not gonna touch that
 		return null
 	var obj = result_json.result
 	return obj
-
-func _ready() -> void:
-	pass
