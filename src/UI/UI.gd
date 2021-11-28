@@ -5,6 +5,7 @@ onready var button1 = $MainVertDiv/ButtonsDiv/Button1
 onready var button2 = $MainVertDiv/ButtonsDiv/Button2
 onready var label = $MainVertDiv/TopPanel/Label
 onready var label2 = $MainVertDiv/MidHorDiv/RepDiv/ReputationLabel
+onready var buttonsdiv = $MainVertDiv/ButtonsDiv
 var match_text_characters = RegEx.new()
 var match_non_text_characters = RegEx.new()
 var rep = 0
@@ -24,6 +25,13 @@ func load_json_file(path):#not gonna touch that
 		print("\tError String: ", result_json.error_string)
 		return null
 	var obj = result_json.result
+	for q in obj:
+		var new_answers = []
+		while q['answers'].size() > 0:
+			var x = int(rand_range(0,q['answers'].size()))
+			new_answers.append(q['answers'][x])
+			q['answers'].remove(x)
+		q['answers'] = new_answers
 	return obj
 
 func alien_text(text):
@@ -80,8 +88,18 @@ func GiveText():
 		if rand_range(0, 1) > 0.9:
 			known_words[word] = 1
 	if json[currentQuestion]['used']:
-		# TODO: infinite loop when you run out of questions
-		return GiveText()
+		for x in range(0,json.size()):
+			var q = json[x]
+			if !q['used']:
+				return GiveText()
+		# if we got here, there are no more questions to take
+		label.text = ""
+		if rep < 50:
+			label2.text = "You Lose"
+		else:
+			label2.text = "You Win"
+		buttonsdiv.visible = false
+		return
 	var Answers = QnA(currentQuestion, 'answers')
 	var Question = QnA(currentQuestion, 'question')
 	button0.text = ReplaceUnknown(Answers[0])
@@ -89,9 +107,9 @@ func GiveText():
 	button2.text = ReplaceUnknown(Answers[2])
 	label.text = ReplaceUnknown(Question)
 	label2.text = str(rep)
-	# json[currentQuestion]['used'] = true
-	print(Answers)
-	print(button1.text)
+	json[currentQuestion]['used'] = true
+	print(Question)
+	print(json[currentQuestion]['answers'])
 
 
 func _on_Button0_pressed() -> void:
