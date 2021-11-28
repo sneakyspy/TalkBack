@@ -63,6 +63,8 @@ func list_all_words():
 			var a = json[x]['answers'][y]['Reply']
 			for word in a.split(" ", false):
 				all_words[normalize_word(word)] = 1
+	for word in ['i', "don't", "know","ha","vietnam", "guam", "khoi", "vu"]:
+		known_words[normalize_word(word)] = 1
 
 func QnA(Question, QorA):
 	var Q = json[Question]['Question']
@@ -77,10 +79,10 @@ func QnA(Question, QorA):
 		return false
 
 func _ready() -> void:
-	match_non_text_characters.compile('[^a-z]')
-	match_text_characters.compile('[A-Za-z]')
-	GiveText()
+	match_non_text_characters.compile('[^a-z\']')
+	match_text_characters.compile('[A-Za-z\']')
 	list_all_words()
+	GiveText()
 
 func GiveText():
 	currentQuestion = int(rand_range(0, json.size()))
