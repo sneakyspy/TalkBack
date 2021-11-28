@@ -17,6 +17,8 @@
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -40,7 +42,7 @@ __meta__ = {
 }
 
 [node name="TopPanel" type="Panel" parent="MainVertDiv"]
-margin_right = 1024.0
+margin_right = 1500.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 0, 100 )
 custom_styles/panel = SubResource( 1 )
@@ -65,8 +67,8 @@ __meta__ = {
 
 [node name="MidHorDiv" type="HBoxContainer" parent="MainVertDiv"]
 margin_top = 104.0
-margin_right = 1024.0
-margin_bottom = 420.0
+margin_right = 1500.0
+margin_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 15
@@ -76,22 +78,22 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="MainVertDiv/MidHorDiv"]
-margin_right = 338.0
-margin_bottom = 316.0
+margin_right = 497.0
+margin_bottom = 616.0
 size_flags_horizontal = 15
 size_flags_vertical = 15
 custom_styles/panel = SubResource( 2 )
 
 [node name="Ha" type="Sprite" parent="MainVertDiv/MidHorDiv/Panel"]
-position = Vector2( 215.598, 532.592 )
+position = Vector2( 118.472, 287.109 )
 scale = Vector2( 17, 17 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="RepDiv" type="Panel" parent="MainVertDiv/MidHorDiv"]
-margin_left = 342.0
-margin_right = 680.0
-margin_bottom = 316.0
+margin_left = 501.0
+margin_right = 998.0
+margin_bottom = 616.0
 size_flags_horizontal = 15
 size_flags_vertical = 15
 custom_styles/panel = SubResource( 3 )
@@ -104,10 +106,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -383.0
-margin_top = -141.0
-margin_right = 383.0
-margin_bottom = 141.0
+margin_left = -362.5
+margin_top = 119.0
+margin_right = 403.5
+margin_bottom = 289.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
@@ -117,28 +119,28 @@ __meta__ = {
 }
 
 [node name="Panel2" type="Panel" parent="MainVertDiv/MidHorDiv"]
-margin_left = 684.0
-margin_right = 1024.0
-margin_bottom = 316.0
+margin_left = 1002.0
+margin_right = 1500.0
+margin_bottom = 616.0
 size_flags_horizontal = 15
 size_flags_vertical = 15
 custom_styles/panel = SubResource( 4 )
 
 [node name="PinkBoy" type="Sprite" parent="MainVertDiv/MidHorDiv/Panel2"]
-position = Vector2( 102.463, 497.37 )
+position = Vector2( 157.964, 231.608 )
 scale = Vector2( 20, 20 )
 texture = ExtResource( 3 )
 centered = false
 flip_h = true
 
 [node name="ButtonsDiv" type="HBoxContainer" parent="MainVertDiv"]
-margin_top = 424.0
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_top = 724.0
+margin_right = 1500.0
+margin_bottom = 900.0
 size_flags_horizontal = 15
 
 [node name="Button0" type="Button" parent="MainVertDiv/ButtonsDiv"]
-margin_right = 338.0
+margin_right = 497.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 4 )
@@ -147,8 +149,8 @@ __meta__ = {
 }
 
 [node name="Button1" type="Button" parent="MainVertDiv/ButtonsDiv"]
-margin_left = 342.0
-margin_right = 680.0
+margin_left = 501.0
+margin_right = 998.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 4 )
@@ -157,8 +159,8 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="MainVertDiv/ButtonsDiv"]
-margin_left = 684.0
-margin_right = 1024.0
+margin_left = 1002.0
+margin_right = 1500.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 4 )

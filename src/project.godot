@@ -18,6 +18,11 @@ _global_script_class_icons={
 config/name="TalkBack"
 run/main_scene="res://UI/UI.tscn"
 
+[display]
+
+window/size/width=1500
+window/size/height=900
+
 [rendering]
 
 environment/default_environment="res://A_env.tres"
