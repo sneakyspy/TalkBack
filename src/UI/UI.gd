@@ -5,7 +5,12 @@ onready var button1 = $MainVertDiv/ButtonsDiv/Button1
 onready var button2 = $MainVertDiv/ButtonsDiv/Button2
 onready var label = $MainVertDiv/TopPanel/Label
 onready var label2 = $MainVertDiv/MidHorDiv/RepDiv/ReputationLabel
+var match_text_characters = RegEx.new()
+var match_non_text_characters = RegEx.new()
 var rep = 0
+var currentQuestion = -1
+var all_words = {}
+var known_words = {}
 
 func load_json_file(path):#not gonna touch that
 	var file = File.new()
@@ -21,7 +26,35 @@ func load_json_file(path):#not gonna touch that
 	var obj = result_json.result
 	return obj
 
+func alien_text(text):
+	return match_text_characters.sub(text, "#", true)
 
+func ReplaceUnknown(text):
+	var words_in = text.split(' ')
+	var words_out = []
+	for word in words_in:
+		if normalize_word(word) in known_words:
+			words_out.append(word)
+		else:
+			words_out.append(alien_text(word))
+	var text_out = ''
+	for word in words_out:
+		text_out += word
+		text_out += ' '
+	return text_out
+
+func normalize_word(word):
+	return match_non_text_characters.sub(word.to_lower(), '', 1)
+
+func list_all_words():
+	for x in range(0, json.size()):
+		var q = json[x]['Question']
+		for word in q.split(" ", false):
+			all_words[normalize_word(word)] = 1
+		for y in range(0, json[x]['answers'].size()):
+			var a = json[x]['answers'][y]['Reply']
+			for word in a.split(" ", false):
+				all_words[normalize_word(word)] = 1
 
 func QnA(Question, QorA):
 	var Q = json[Question]['Question']
@@ -36,27 +69,41 @@ func QnA(Question, QorA):
 		return false
 
 func _ready() -> void:
-	var random = rand_range(0, json.size())
-	if json[random]['used'] == false:
-		GiveText(random)
-	else:
-		json = rand_range(0, json.size())
-		return
+	match_non_text_characters.compile('[^a-z]')
+	match_text_characters.compile('[A-Za-z]')
+	GiveText()
+	list_all_words()
 
-func GiveText(Value):
-	var Answers = QnA(Value, 'answers')
-	var Q = json[Value]
-	button0.text = Answers[0]
-	if button0.pressed == true:
-		rep += Q['Net Worth']
-	button1.text = Answers[1]
-	if button1.pressed == true:
-		rep += Q['Net Worth']
-	button2.text = Answers[2]
-	if button2.pressed == true:
-		rep += Q['Net Worth']
-	var Question = QnA(Value, 'question')
-	label.text = Question
+func GiveText():
+	currentQuestion = int(rand_range(0, json.size()))
+	for word in all_words:
+		if rand_range(0, 1) > 0.9:
+			known_words[word] = 1
+	if json[currentQuestion]['used']:
+		# TODO: infinite loop when you run out of questions
+		return GiveText()
+	var Answers = QnA(currentQuestion, 'answers')
+	var Question = QnA(currentQuestion, 'question')
+	button0.text = ReplaceUnknown(Answers[0])
+	button1.text = ReplaceUnknown(Answers[1])
+	button2.text = ReplaceUnknown(Answers[2])
+	label.text = ReplaceUnknown(Question)
 	label2.text = str(rep)
+	# json[currentQuestion]['used'] = true
 	print(Answers)
 	print(button1.text)
+
+
+func _on_Button0_pressed() -> void:
+	rep += json[currentQuestion]['answers'][0]['Net outcome']
+	GiveText()
+
+
+func _on_Button1_pressed() -> void:
+	rep += json[currentQuestion]['answers'][1]['Net outcome']
+	GiveText()
+
+
+func _on_Button2_pressed() -> void:
+	rep += json[currentQuestion]['answers'][2]['Net outcome']
+	GiveText()
