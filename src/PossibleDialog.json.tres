@@ -6,7 +6,7 @@
     "answers": [
       {
         "Reply":"Good",
-        "Net outcome": 10
+        "Net outcome": 8
       },
       {
         "Reply":"Bad",
@@ -25,7 +25,7 @@
     "answers": [
       {
         "Reply":"Ha",
-        "Net outcome": 10
+        "Net outcome": 8
       },
       {
         "Reply":"Vietnam",
@@ -44,7 +44,7 @@
     "answers": [
       {
         "Reply":"Yes",
-        "Net outcome": 10
+        "Net outcome": 7
       },
       {
         "Reply":"No",
@@ -63,7 +63,7 @@
     "answers": [
       {
         "Reply":"Vietnam",
-        "Net outcome": 10
+        "Net outcome": 7
       },
       {
         "Reply":"America",
@@ -86,7 +86,7 @@
       },
       {
         "Reply":"KFC",
-        "Net outcome": -5
+        "Net outcome": -6
       },
       {
         "Reply":"I don't know",
@@ -101,11 +101,11 @@
     "answers": [
       {
         "Reply":"Three",
-        "Net outcome": 10
+        "Net outcome": 7
       },
       {
         "Reply":"Fifty",
-        "Net outcome": -5
+        "Net outcome": -7
       },
       {
         "Reply":"I don't know",
@@ -124,7 +124,7 @@
       },
       {
         "Reply":"Career",
-        "Net outcome": -5
+        "Net outcome": -4
       },
       {
         "Reply":"I don't know",
@@ -143,7 +143,7 @@
       },
       {
         "Reply":"New York",
-        "Net outcome": -5
+        "Net outcome": -4
       },
       {
         "Reply":"I don't know",
@@ -161,7 +161,7 @@
         "Net outcome": 10
       },
       {
-        "Reply":"Eight",
+        "Reply":"Six",
         "Net outcome": -5
       },
       {
@@ -181,7 +181,7 @@
       },
       {
         "Reply":"Four",
-        "Net outcome": -5
+        "Net outcome": -2
       },
       {
         "Reply":"I don't know",
@@ -200,7 +200,7 @@
       },
       {
         "Reply":"Tents",
-        "Net outcome": -5
+        "Net outcome": -6
       },
       {
         "Reply":"I don't know",
@@ -219,7 +219,7 @@
       },
       {
         "Reply":"Cooking classes",
-        "Net outcome": -5
+        "Net outcome": -6
       },
       {
         "Reply":"I don't know",
@@ -233,12 +233,12 @@
     "Question": "What church do you go to?",
     "answers": [
       {
-        "Reply":"Del_Ray_Southern_Baptist_Church",
+        "Reply":"Del_Ray_Baptist_Church",
         "Net outcome": 10
       },
       {
         "Reply":"Acts_Full_Gospel_Church ",
-        "Net outcome": -5
+        "Net outcome": -7
       },
       {
         "Reply":"I don't know",
@@ -257,7 +257,7 @@
       },
       {
         "Reply":"Walking with Vu",
-        "Net outcome": -5
+        "Net outcome": -4
       },
       {
         "Reply":"I don't know",
@@ -276,11 +276,11 @@
       },
       {
         "Reply":"Nothing",
-        "Net outcome": -5
+        "Net outcome": -6
       },
       {
         "Reply":"I don't know",
-        "Net outcome": -2
+        "Net outcome": -4
       }
     ]
   }
