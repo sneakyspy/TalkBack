@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TalkBack"
+run/main_scene="res://UI/UI.tscn"
 
 [rendering]
 
